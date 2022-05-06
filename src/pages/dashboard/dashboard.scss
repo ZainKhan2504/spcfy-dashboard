@@ -1,7 +1,108 @@
 .main {
     display: flex;
+    background-color: #f6f6e97b;
 
     &-container {
         flex: 6;
+        margin: 15px 40px;
+        width: 100%;
+
+        &--raw {
+            margin-bottom: 10px;
+
+            &-heading {
+                margin-bottom: 10px;
+
+                h5 {
+                    font-weight: 600;
+                }
+            }
+
+            &-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 5px;
+
+                &-row {
+                    width: 100%;
+                    text-align: center;
+
+                    &:not(:first-child) {
+                        background-color: white;
+                    }
+
+                    &-head {
+                        font-size: 10px;
+                        color: grey;
+                    }
+
+                    &-data {
+                        font-size: 12px;
+                        padding: 5px;
+                        color: grey;
+
+                        .progress {
+                            color: #EECE1A;
+                        }
+
+                        .yellow {
+                            color: #EECE1A;
+                        }
+
+                        .blue {
+                            color: rgba(0, 0, 255, 0.527);
+                        }
+                    }
+                }
+            }
+        }
+
+        &--processed {
+            &-heading {
+                margin-bottom: 10px;
+
+                h5 {
+                    font-weight: 600;
+                }
+            }
+
+            &-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 5px;
+
+                &-row {
+                    width: 100%;
+                    text-align: center;
+
+                    &:not(:first-child) {
+                        background-color: white;
+                    }
+
+                    &-head {
+                        font-size: 10px;
+                        color: grey;
+                    }
+
+                    &-data {
+                        font-size: 12px;
+                        padding: 5px;
+                        color: grey;
+
+                        .progress {
+                            color: #EECE1A;
+                        }
+
+                        .yellow {
+                            color: #EECE1A;
+                        }
+
+                        .blue {
+                            color: rgba(0, 0, 255, 0.527);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
