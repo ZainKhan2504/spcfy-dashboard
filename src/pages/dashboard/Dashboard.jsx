@@ -1,11 +1,14 @@
 import "./dashboard.scss";
 
 import React from "react";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const Dashboard = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <Navbar />
+      <Sidebar />
     </div>
   );
 };
