@@ -7,7 +7,9 @@ const Landing = () => {
   return (
     <div className="landing">
       <div className="landing-header">
-        <img src={logo} alt="Logo" className="landing-header--logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" className="landing-header--logo" />
+        </Link>
       </div>
       <div
         style={{
