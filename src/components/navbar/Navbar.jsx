@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="left">
           <img src={logo} alt="Logo" />
           <Link to="" className="run">
-            <CreateNewFolderIcon style={{ color: "yellow" }} />
+            <CreateNewFolderIcon style={{ color: "#EECE1A" }} />
             <p>create run</p>
           </Link>
         </div>
@@ -37,7 +37,10 @@ const Navbar = () => {
             <p>{user.email}</p>
           </div>
           <div className="item">
-            <KeyboardArrowDownIcon className="icon" />
+            <KeyboardArrowDownIcon
+              className="icon"
+              style={{ color: "#EECE1A" }}
+            />
           </div>
         </div>
       </div>

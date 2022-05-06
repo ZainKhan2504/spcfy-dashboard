@@ -6,10 +6,13 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Sidebar />
-    </div>
+      <div className="main">
+        <Sidebar />
+        <div className="main-container"></div>
+      </div>
+    </>
   );
 };
 
