@@ -88,7 +88,9 @@ const Dashboard = () => {
                   <InsertChartIcon className="yellow" />
                 </td>
                 <td className="main-container--raw-table-row-data">
-                  Cornfield analysis - Bavaria
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Cornfield analysis - Bavaria
+                  </a>
                 </td>
                 <td className="main-container--raw-table-row-data">
                   2021-06-15
@@ -124,7 +126,9 @@ const Dashboard = () => {
                   <InsertChartIcon />
                 </td>
                 <td className="main-container--raw-table-row-data">
-                  Lighttrap - IV
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Lighttrap - IV
+                  </a>
                 </td>
                 <td className="main-container--raw-table-row-data">
                   2021-08-17
@@ -160,7 +164,9 @@ const Dashboard = () => {
                   <InsertChartIcon className="blue" />
                 </td>
                 <td className="main-container--raw-table-row-data">
-                  Pollen (Flowering Strip)
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Pollen (Flowering Strip)
+                  </a>
                 </td>
                 <td className="main-container--raw-table-row-data">
                   2021-07-21
@@ -231,7 +237,9 @@ const Dashboard = () => {
                   <InsertChartIcon className="yellow" />
                 </td>
                 <td className="main-container--processed-table-row-data">
-                  Forest Fringe South
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Forest Fringe South
+                  </a>
                 </td>
                 <td className="main-container--processed-table-row-data">
                   2020-03-29
@@ -265,7 +273,9 @@ const Dashboard = () => {
                   <InsertChartIcon />
                 </td>
                 <td className="main-container--processed-table-row-data">
-                  Sediment Sample
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Sediment Sample
+                  </a>
                 </td>
                 <td className="main-container--processed-table-row-data">
                   2019-07-16
@@ -299,7 +309,9 @@ const Dashboard = () => {
                   <InsertChartIcon className="blue" />
                 </td>
                 <td className="main-container--processed-table-row-data">
-                  Bat Feces
+                  <a href="https://eukaryota.netlify.app/" target="_blank">
+                    Bat Feces
+                  </a>
                 </td>
                 <td className="main-container--processed-table-row-data">
                   2020-09-11
