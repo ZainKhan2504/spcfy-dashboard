@@ -1,18 +1,62 @@
 import "./dashboard.scss";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import AddIcon from "@mui/icons-material/Add";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import { CircularProgress } from "@mui/material";
 import file from "../../file/file.xlsx";
+import fastq from "../../img/fastq.png";
+import otu from "../../img/otu.png";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 1,
+};
 
 const Dashboard = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
-      <Navbar />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <div className="modal">
+            <h6 className="modal-heading">
+              <AddIcon /> Create a new run
+            </h6>
+            <div className="modal-main">
+              <div className="modal-main--left">
+                <img src={fastq} alt="fastq" />
+                <ArrowCircleRightOutlinedIcon />
+              </div>
+              <div className="modal-main--right">
+                <img src={otu} alt="otu" />
+                <ArrowCircleRightOutlinedIcon />
+              </div>
+            </div>
+          </div>
+        </Box>
+      </Modal>
+      <Navbar handleOpen={handleOpen} />
       <div className="main">
         <Sidebar />
         <div className="main-container">

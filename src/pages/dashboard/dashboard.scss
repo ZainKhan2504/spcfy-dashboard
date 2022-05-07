@@ -106,3 +106,41 @@
         }
     }
 }
+
+.modal {
+
+    &-heading {
+        display: flex;
+        align-items: center;
+    }
+
+    &-main {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+
+        &--left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        &--right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

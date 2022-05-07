@@ -5,10 +5,10 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import logo from "../../img/logo.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const Navbar = ({ handleOpen }) => {
   const { user } = useSelector((state) => state.auth);
 
   return (
@@ -16,10 +16,14 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <img src={logo} alt="Logo" />
-          <Link to="" className="run">
+          <div
+            className="run"
+            style={{ cursor: "pointer" }}
+            onClick={handleOpen}
+          >
             <CreateNewFolderIcon style={{ color: "#EECE1A" }} />
             <p>create run</p>
-          </Link>
+          </div>
         </div>
         <div className="items">
           <div className="item">
