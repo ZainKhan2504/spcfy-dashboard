@@ -1,5 +1,5 @@
 import "./dashboard.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
@@ -14,6 +14,9 @@ import fastq from "../../img/fastq.png";
 import otu from "../../img/otu.png";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { reset } from "../../features/auth/authSlice";
 
 const style = {
   position: "absolute",
@@ -27,6 +30,21 @@ const style = {
 };
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+
+    return () => {
+      dispatch(reset());
+    };
+  }, [user, navigate, dispatch]);
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

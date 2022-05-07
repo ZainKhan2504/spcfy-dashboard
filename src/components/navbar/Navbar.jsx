@@ -37,9 +37,11 @@ const Navbar = ({ handleOpen }) => {
             <NotificationsNoneOutlinedIcon className="icon" />
             <div className="counter">1</div>
           </div>
-          <div className="item">
-            <p>{user.email}</p>
-          </div>
+          {user && (
+            <div className="item">
+              <p>{user.email}</p>
+            </div>
+          )}
           <div className="item">
             <KeyboardArrowDownIcon
               className="icon"

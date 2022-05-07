@@ -7,11 +7,21 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Link } from "react-router-dom";
-
-import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, reset } from "../../features/auth/authSlice";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/");
+  };
+
   return (
     <div className="sidebar">
       <hr />
@@ -45,10 +55,12 @@ const Sidebar = () => {
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
+          {user && (
+            <li onClick={onLogout}>
+              <ExitToAppIcon className="icon" />
+              <span>Logout</span>
+            </li>
+          )}
         </ul>
       </div>
       <div className="bottom">
